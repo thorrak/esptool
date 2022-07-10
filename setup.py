@@ -40,13 +40,12 @@ def find_version(*file_paths):
 
 
 if os.name != "nt":
-    scripts = ["esptool.py", "espefuse.py", "espsecure.py"]
+    scripts = ["espefuse.py", "espsecure.py"]
     entry_points = {}
 else:
     scripts = []
     entry_points = {
         "console_scripts": [
-            "esptool.py=esptool.__init__:_main",
             "espsecure.py=espsecure.__init__:_main",
             "espefuse.py=espefuse.__init__:_main",
         ],
